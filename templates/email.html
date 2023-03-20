@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block content %}
+    <section class="contact" id="contact">
+      <div class="contact-description">
+        <h2>Use the contact form to contact us!<h2>
+        <h3>What to Include in Your Message:</h3>
+        <ul>
+          <li>A brief description of the website(s) you would like to scrape</li>
+          <li>The data points you are interested in extracting</li>
+          <li>The scraping plan you are interested in (One-Time Scrap, Basic Plan, or Pro Plan)</li>
+          <li>Any additional information or questions you may have</li>
+        </ul>
+      </div>
+    <form class="contact-form" method="post">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        <button type="submit">SEND MESSAGE</button>
+      </form>
+    </section>
+
+{% endblock content %}
+
