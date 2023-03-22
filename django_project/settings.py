@@ -37,7 +37,7 @@ SECURE_HSTS_PRELOAD = env.bool("DJANGO_SECURE_HSTS_PRELOAD", default=True)
 
 
 ALLOWED_HOSTS = [
-    ".herokuapp.com", "localhost", "127.0.0.1"
+    "vast-mountain-76733.herokuapp.com", "localhost", "127.0.0.1"
 ]
 
 
