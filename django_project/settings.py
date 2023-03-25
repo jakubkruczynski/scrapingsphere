@@ -45,7 +45,7 @@ SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
 
 
 ALLOWED_HOSTS = [
-    "scrapingsphere.com", "vast-mountain-76733.herokuapp.com", "localhost", "127.0.0.1"
+    "www.scrapingsphere.com", "scrapingsphere.com", "vast-mountain-76733.herokuapp.com", "localhost", "127.0.0.1"
 ]
 
 
