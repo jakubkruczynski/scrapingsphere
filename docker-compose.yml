@@ -19,6 +19,8 @@ services:
       - "DJANGO_SECURE_HSTS_PRELOAD=False"  # new
       - "DJANGO_SESSION_COOKIE_SECURE=False"  # new
       - "DJANGO_CSRF_COOKIE_SECURE=False"  # new
+      - "EMAIL_HOST_PASSWORD=miwnys-zimpo2-Feqkez"
+
   db:
     image: postgres:13
     volumes:
