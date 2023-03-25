@@ -3,6 +3,155 @@
 {% block title %}Home{% endblock title %}
 
 {% block content %}
-  <h1>This is our home page.</h1>
+    <header>
+      <h1>Web Scraping Services</h1>
+      <h2>Extract any type of data from any website with our customized web scraping solutions</h2>
+      <a href="{% url 'contact' %}" class="button-primary">GET IN TOUCH</a>
+    </header>
+
+
+
+    <main>
+      <div class="container">
+        <h2 class="section-title">Unlock the Power of Data</h2>
+        <p class="section-description">At Scraping Sphere, we provide reliable and fast web scraping services that help you gain access to accurate and up-to-date data. Our experienced team can extract data from any website, even the most complex ones, and deliver it to you in various formats, including CSV, JSON, and XML.</p>
+        <div class="services">
+          <div class="service">
+            <h3 class="service-title">Custom Web Scraping</h3>
+            <p class="service-description">Our team can extract data from any website, no matter how complex or challenging the structure. </p>
+          </div>
+          <div class="service">
+            <h3 class="service-title">Data Cleaning and Processing</h3>
+            <p class="service-description">Ensure the accuracy of your data with our cleaning and processing services. </p>
+          </div>
+          <div class="service">
+            <h3 class="service-title">Data Analysis and Visualization</h3>
+            <p class="service-description">Gain valuable insights and make data-driven decisions with our analysis and visualization services. </p>
+          </div>
+        </div>
+        <a href="{% url 'pricing' %}" class="button-main">CHECK OUR PRICES</a>
+      </div>
+    </main>
+
+
+
+
+    <section class="about-page">
+      <div class="about-page-header">
+        <p class="about-page-title">
+          Highest quality data extraction services to businesses and individuals alike.
+        <p>
+      </div>
+      <div class="about-page-description">
+        <p>
+          Our team of experienced web scrapers uses the latest tools and techniques to extract data from any website, regardless of its complexity or structure. We also offer data cleaning, processing, analysis, and visualization services to help you make the most out of your data.
+        </p>
+        <p>
+          If you're looking for a reliable and quick web scraping service, look no further than Scraping Sphere. Contact us today to learn more about our services and how we can help you achieve your goals.
+        </p>
+      </div>
+    </section>
+
+
+
+
+    <section class="data-examples">
+      <div class="data-examples-header">
+        <h2>Examples of Data We Can Extract</h2>
+        <p class="data-examples-description">Take a look at some of the types of data we've extracted for our clients from different websites.</p>
+      </div>
+      <div class="examples">
+
+        <div class="example">
+          <h3 class="example-title">E-commerce Websites</h3>
+          <p class="example-description">Extract product information, customer reviews, pricing data, and more from popular online marketplaces.</p>
+        </div>
+        <div class="example">
+          <h3 class="example-title">Real Estate Websites</h3>
+          <p class="example-description">Extract property listings, prices, and other relevant data from real estate platforms.</p>
+        </div>
+        <div class="example">
+          <h3 class="example-title">Social Media Websites</h3>
+          <p class="example-description">Extract user profiles, posts, comments, and other data from top social media platforms.</p>
+        </div>
+        <div class="example">
+          <h3 class="example-title">News Websites</h3>
+          <p class="example-description">Extract articles, headlines, author information, and other data from popular news outlets.</p>
+        </div>
+        <div class="example">
+          <h3 class="example-title">Financial Websites</h3>
+          <p class="example-description">Extract stock prices, company information, financial reports, and other data from well-known financial sites.</p>
+        </div>
+        <div class="example">
+          <h3 class="example-title">Travel Websites</h3>
+          <p class="example-description">Extract hotel listings, flight information, travel reviews, and other data from top travel booking platforms.</p>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="questions">
+        <div class="question">
+          <input type="checkbox" id="question1" class="question-input">
+          <label for="question1" class="question-label">What is web scraping?</label>
+          <div class="answer">
+            <p>Web scraping is the process of extracting data from websites. Our team uses specialized tools and techniques to collect data from websites and deliver it to you in a format that is easy to use.</p>
+          </div>
+        </div>
+        <div class="question">
+          <input type="checkbox" id="question2" class="question-input">
+          <label for="question2" class="question-label">What types of data can you extract?</label>
+          <div class="answer">
+            <p>We can extract any type of data from websites, including product information, customer reviews, pricing data, and more. Just let us know what data you are interested in and we will work with you to create a customized scraping plan.</p>
+          </div>
+        </div>
+        <div class="question">
+          <input type="checkbox" id="question3" class="question-input">
+          <label for="question3" class="question-label">How accurate is the data you provide?</label>
+          <div class="answer">
+            <p>Our team takes great care to ensure the accuracy of the data we provide. We use a combination of automated tools and manual checks to verify the data we collect, and we work closely with our clients to understand their specific needs and requirements.</p>
+          </div>
+        </div>
+        <div class="question">
+          <input type="checkbox" id="question4" class="question-input">
+          <label for="question4" class="question-label">What formats can you deliver the data in?</label>
+          <div class="answer">
+            <p>We can deliver the data in a variety of formats, including CSV, JSON, and XML. Just let us know which format you prefer and we will work with you to ensure that the data is delivered in a format that is easy to use and manipulate.</p>
+          </div>
+        </div>
+        <div class="question">
+          <input type="checkbox" id="question5" class="question-input">
+          <label for="question5" class="question-label">How long does it take to complete a web scraping project?</label>
+          <div class="answer">
+            <p>The time it takes to complete a web scraping project can vary depending on the complexity of the website and the amount of data you are interested in extracting. However, we work quickly and efficiently to ensure that your project is completed on time and on budget.</p>
+          </div>
+        </div>
+        <div class="question">
+          <input type="checkbox" id="question6" class="question-input">
+          <label for="question6" class="question-label">What is your pricing model?</label>
+          <div class="answer">
+            <p>We offer a range of pricing plans to fit any budget. Our One-Time Scrap plan starts at $99, while our Basic Plan is $199/month and our Pro Plan is $399/month. We also offer customized plans for clients with more complex needs.</p>
+          </div>
+        </div>
+        <div class="question">
+          <input type="checkbox" id="question7" class="question-input">
+          <label for="question7" class="question-label">How can I get started?</label>
+          <div class="answer">
+            <p>Getting started is easy! Just fill out the contact form on our website with a brief description of your project and we will get back to you as soon as possible to discuss your needs and provide a quote.</p>
+          </div>
+        </div>
+        <div class="question">
+          <input type="checkbox" id="question8" class="question-input">
+          <label for="question8" class="question-label">Do you offer any guarantees?</label>
+          <div class="answer">
+            <p>Yes, we are committed to providing our clients with high-quality data and excellent customer service. If you are not satisfied with the data we provide, we will work with you to make it right.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
 {% endblock content %}
 

@@ -1,0 +1,38 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Terms and Conditions{% endblock title %}
+
+{% block content %}
+<section class="terms-and-conditions">
+  <h2>Terms and Conditions</h2>
+  <p>These terms and conditions govern your use of our web scraping services. By using our services, you agree to these terms and conditions.</p>
+
+  <h3>Scope of Services</h3>
+  <p>We offer web scraping services to extract data from websites and provide the data to you in a format of your choice. We will work with you to understand your specific data needs and requirements and provide a customized scraping plan.</p>
+
+  <h3>Payment and Refunds</h3>
+  <p>We offer a range of pricing plans to fit any budget. Payment is due in advance for our Basic and Pro plans, and payment for our One-Time Scrap plan is due upon completion of the project. We accept payment by credit card or PayPal.</p>
+  <p>We do not offer refunds for our One-Time Scrap plan, but we do offer refunds for our Basic and Pro plans if you are not satisfied with our services. To request a refund, please contact us using the contact form on our website.</p>
+
+  <h3>Intellectual Property</h3>
+  <p>All intellectual property rights in the data we extract from websites belong to the owners of the respective websites. We do not claim any ownership rights in the data we provide to you.</p>
+
+  <h3>Liability</h3>
+  <p>We will use reasonable care and skill in providing our services to you. However, we do not guarantee that the data we extract will be complete, accurate, or error-free. We will not be liable for any damages or losses arising from your use of the data we provide.</p>
+  <p>We will not be liable for any damages or losses arising from any delay or failure to provide our services due to events beyond our control, including but not limited to internet outages, server downtime, or changes to the structure of the websites we are scraping.</p>
+
+  <h3>Indemnification</h3>
+  <p>You agree to indemnify and hold us harmless from any claims, damages, or losses arising from your use of our services or your violation of these terms and conditions.</p>
+
+  <h3>Termination</h3>
+  <p>We reserve the right to terminate our services to you at any time if you violate these terms and conditions or for any other reason.</p>
+
+  <h3>Changes to these Terms and Conditions</h3>
+  <p>We reserve the right to update or modify these terms and conditions at any time. We will post any changes to these terms and conditions on our website, and the updated terms and conditions will be effective immediately upon posting.</p>
+
+  <h3>Contact Us</h3>
+  <p>If you have any questions or concerns about these terms and conditions or our services, please <a href="{% url 'contact' %}" class="mail-link">contact us</a> using the contact form on our website.</p>
+</section>
+
+{% endblock content %}

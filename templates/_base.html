@@ -1,17 +1,45 @@
 {% load static %}
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>{% block title %}Scraping Sphere{% endblock title %}</title>
-  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Scraping Sphere{% endblock title %}</title>
 
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+  </head>
 <body>
-  <div class="container">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="{% url 'home' %}">Scraping Sphere</a>
+      </div>
+      <ul class="menu">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'pricing' %}">Pricing</a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+
+      </ul>
+    </nav>
+  <div class="block-content">
     {% block content %}
     {% endblock content %}
   </div>
+
+    <footer>
+      <ul class="footer-menu">
+        <li><a href="{% url 'privacypolicy' %}" class="footer-privacy">Privacy Policy</a></li>
+        <li><a href="{% url 'terms' %}" class="footer-terms">Terms and Conditions</a></li>
+        <li><a href="{% url 'contact' %}" class="footer-terms">Contact Us</a></li>
+
+      </ul>
+      <div class="footer-info">
+        <p class="footer-logo">&copy; 2023 Scraping Sphere</p>
+        <a href="mailto:contact@scrapingsphere.com" class="mail-link">contact@scrapingsphere.com</a>
+      </div>
+    </footer>
   <!-- JavaScript -->
   <script src="{% static 'js/base.js' %}"></script>
 </body>

@@ -16,6 +16,13 @@ from environs import Env
 env = Env()
 env.read_env()
 
+
+# django-debug-toolbar
+import socket
+
+hostname, _, ips = socket.gethostbyname_ex(socket.gethostname())
+INTERNAL_IPS = [ip[:-1] + "1" for ip in ips]
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,8 +49,18 @@ ALLOWED_HOSTS = [
 ]
 
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"  # new
+#DEFAULT_FROM_EMAIL = "contact@scrapingsphere.com"
+#EMAIL_HOST = "smtp.sendgrid.net"  # new
+#EMAIL_HOST_USER = "apikey"  # new
+#EMAIL_HOST_PASSWORD = "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"
 
+EMAIL_HOST = 'mail.privateemail.com'
+EMAIL_HOST_USER = 'contact@scrapingsphere.com'
+
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_PORT = 587  # new
+EMAIL_USE_TLS = True  # new
 
 # Application definition
 
@@ -59,6 +76,8 @@ INSTALLED_APPS = [
     # third party
     "crispy_forms",
     "crispy_bootstrap5",
+    "debug_toolbar",
+
     # local
     'pages.apps.PagesConfig',
     'sendemail.apps.SendemailConfig',
@@ -85,6 +104,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "debug_toolbar.middleware.DebugToolbarMiddleware",
+
 ]
 
 ROOT_URLCONF = "django_project.urls"
@@ -112,9 +133,7 @@ WSGI_APPLICATION = "django_project.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db.postgres")
-
-
+    "default": env.dj_db_url("DATABASE_URL", default="postgres://postgres@db/postgres")
 }
 
 # Password validation
