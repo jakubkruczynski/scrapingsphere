@@ -11,7 +11,7 @@ services:
     depends_on:
       - db
     environment:
-      - "DJANGO_DEBUG=True"
+      - "DJANGO_DEBUG=False"
       - "DJANGO_SECURE_SSL_REDIRECT=False"  # new
       - "DJANGO_SECURE_HSTS_SECONDS=0"  # new
       - "DJANGO_SECURE_HSTS_INCLUDE_SUBDOMAINS=False"  # new
