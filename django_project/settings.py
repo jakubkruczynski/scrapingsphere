@@ -53,7 +53,7 @@ EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"  # new
 #DEFAULT_FROM_EMAIL = "contact@scrapingsphere.com"
 #EMAIL_HOST = "smtp.sendgrid.net"  # new
 #EMAIL_HOST_USER = "apikey"  # new
-#EMAIL_HOST_PASSWORD = "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"
+#EMAIL_HOST_PASSWORD = "password"
 
 EMAIL_HOST = 'mail.privateemail.com'
 EMAIL_HOST_USER = 'contact@scrapingsphere.com'
